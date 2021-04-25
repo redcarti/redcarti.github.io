@@ -106,9 +106,7 @@
         function Type() { 
             // Get substring with 1 characater added
             var text =  typings[part].substring(0, partIndex + 1);
-            $('.typing').contents().filter((i, el) => {
-                console.log(i, el)
-            }).text(text);
+            $('.typing').contents().filter((i, el) => el.className !== 'cursor').text(text);
             partIndex++;
 
             // If full sentence has been displayed then start to delete the sentence after some time
@@ -124,9 +122,7 @@
         function Delete() {
             // Get substring with 1 characater deleted
             var text =  typings[part].substring(0, partIndex - 1);
-            $('.typing').contents().filter((i, el) => {
-                console.log(i, el)
-            }).text(text);
+            $('.typing').contents().filter((i, el) => el.className !== 'cursor').text(text);
             partIndex--;
 
             // If sentence has been deleted then start to display the next sentence
