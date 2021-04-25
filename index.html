@@ -87,6 +87,8 @@
         }
     </style>
     <script>
+        window.sayHi = () => console.log('Hi!!!')
+        
         function getRandomInt(min, max) {
             return Math.floor(Math.random() * (max - min)) + min;
         }
@@ -94,13 +96,15 @@
         let typings = [
             '() => redcarti()',
             'window.close()',
-            '\'use strict\';',
+            '\'use strict\'',
             'let redcarti = require(\'redcarti\')',
             'undefined === null',
             '$(\'.typing .inner\').text(\'redcarti\');',
             'html === \'programming language\'',
             '!![] !== ![]',
-            '{ \'hi\': \'Hello World!\' }'
+            '{ \'hi\': \'Hello World!\' }',
+            '// type window.sayHi()',
+            'fetch(\'https://www.google.com/search?q=how+to+make+a+site\')'
         ]
         
         let typingSpeed = [
