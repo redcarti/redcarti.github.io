@@ -73,47 +73,62 @@
             'undefined === null'
         ]
         
+        let partIndex = 0
+        let part = 0
+        
         let typingNow = {
             content: '',
             length: 0
         }
         
+        let interval
+        
         $(document).ready(function() {
             setInterval ('cursorAnimation()', 1500);
             
             typingNow.content = typings[0]
-            
-            type()
-            .finally(() => {
-                return erase()
-            })
-            .finally(() => {
-                return type()
-            })
+            interval = setInterval(Type, 100);
         });
+        
+        function Type() { 
+            // Get substring with 1 characater added
+            var text =  typings[part].substring(0, partIndex + 1);
+            $('.text').text(text);
+            partIndex++;
 
-        async function type() {
-            $('.text').html(caption.substr(0, typingNow.length++));
-            if(typingNow.length < typingNow.content.length+1) {
-                setTimeout('type()', 50);
-                resolve(false)
-            } else {
-                typingNow.length = 0;
-                typingNow.content = '';
-                resolve(true)
+            // If full sentence has been displayed then start to delete the sentence after some time
+            if(text === typings[part]) {
+                clearInterval(interval);
+                setTimeout(function() {
+                    interval = setInterval(Delete, 50);
+                }, 1000);
             }
         }
 
-        async function erase() {
-            $('.text').html(caption.substr(0, typingNow.length--));
-            if(typingNow.length >= 0) {
-                setTimeout('erase()', 50);
-                resolve(false)
-            } else {
-                typingNow.length = 0;
-                typingNow.content = '';
-                resolve(true)
-            }	
+        // Implements deleting effect
+        function Delete() {
+            // Get substring with 1 characater deleted
+            var text =  typings[part].substring(0, partIndex - 1);
+            $('.text').text(text);
+            partIndex--;
+
+            // If sentence has been deleted then start to display the next sentence
+            if(text === '') {
+                clearInterval(interval);
+
+                // If current sentence was last then display the first one, else move to the next
+                if(part == (typings.length - 1))
+                    part = 0;
+                else
+                    part++;
+
+                partIndex = 0;
+
+                // Start to display the next sentence after some time
+                setTimeout(function() {
+                    interval = setInterval(Type, 100);
+                }, 200);
+            }
         }
         
         function cursorAnimation() {
