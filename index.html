@@ -98,8 +98,8 @@
                 setTimeout('type()', 50);
                 resolve(false)
             } else {
-                captionLength = 0;
-                caption = '';
+                typingNow.length = 0;
+                typingNow.content = '';
                 resolve(true)
             }
         }
@@ -108,9 +108,11 @@
             $('.text').html(caption.substr(0, typingNow.length--));
             if(typingNow.length >= 0) {
                 setTimeout('erase()', 50);
+                resolve(false)
             } else {
-                captionLength = 0;
-                caption = '';
+                typingNow.length = 0;
+                typingNow.content = '';
+                resolve(true)
             }	
         }
         
