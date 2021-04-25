@@ -111,6 +111,25 @@
         }
         
         window.hi = 'I mean... ok'
+        
+        class BigFloppa {
+            constructor () {}
+            
+            pelmeni() {
+                console.log('Пельмени. '
+                           +'Хорошие пельмени это очень вкусно. '
+                           +'На самом деле рецепт простой - много мяса, мало теста. '
+                           +'Сперва готовим тонкое яичное тесто, с добавлением сливочного масла. '
+                           +'Лук сладких сортов для образования бульончика и перец совсем немного. '
+                           +'Щедро выкладываем великолепный рубленый фарш, много мяса, мало теста. '
+                           +'Вот он настоящий пельмень, а внутри много сочной начинки, грудинка индюшки с курицей или телятина со свининой. '
+                           +'Многие и забыли как это может быть вкусно. '
+                           +'Выбирайте и наслаждайтесь - пельмени флопские. '
+                           +'Много мяса, мало теста.')
+            }
+        }
+        
+        const jojo = () => throw new ReferenceError('is this a JoJo reference?')
         //
         
         function getRandomInt(min, max) {
@@ -133,14 +152,18 @@
             'aidar !== \'programmer\'',
             '\'butter dog\'',
             'window.break().then(console.log)',
-            '// TypeError: redcarti is not defined',
+            '// ReferenceError: redcarti is not defined',
             '// there\'s 5 in total typing speeds',
             'Number([+!+[]]+[!+[]+!+[]+!+[]])',
             '(() => console.log(\'well ok\'))()',
             'module.exports = { [window.hi]: \'Hello C++\' }',
             '// don\'t try to module.exports here',
             'takeRandomSpeed()',
-            '!(1 + 1 === 3) + 1 // is true answer'
+            '!(1 + 1 === 3) + 1 // is true answer',
+            '// i cant be hired but someone hire me',
+            'new BigFloppa().pelmeni()',
+            '// Van???',
+            'jojo() // ReferenceError: is this a JoJo reference?'
         ]
         
         let typingSpeed = [
