@@ -70,11 +70,10 @@
             flex-wrap: wrap;
         }
         
-        .cursor {
-            flex: 0 0 auto;
+        .inner:after {
+            content: '|';
+            display: flex;
         }
-        
-        p, span { display: inline; }
     </style>
     <script>
         function getRandomInt(min, max) {
@@ -156,7 +155,7 @@
         }
         
         function cursorAnimation() {
-            $('.cursor').animate({
+            $('.inner:after').animate({
                 opacity: 0
             }, 'fast', 'swing').animate({
                 opacity: 1
