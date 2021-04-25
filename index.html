@@ -70,7 +70,7 @@
             flex-wrap: wrap;
         }
         
-        .inner:after {
+        .inner::after {
             content: '|';
             display: flex;
         }
@@ -155,7 +155,7 @@
         }
         
         function cursorAnimation() {
-            $('.inner:after').animate({
+            $('.inner::after').animate({
                 opacity: 0
             }, 'fast', 'swing').animate({
                 opacity: 1
