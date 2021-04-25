@@ -16,6 +16,11 @@
             display: flex;
             text-decoration: none;
             max-width: 100vw;
+            -webkit-font-feature-settings: "liga" on, "calt" on;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            font-family: 'JetBrains Mono', sans-serif;
+            letter-spacing: normal;
         }
         
         ::selection, ::-moz-selection, ::-webkit-selection {
@@ -44,8 +49,6 @@
         }
         
         .text, a {
-            font-family: 'JetBrains Mono', sans-serif;
-            letter-spacing: normal;
             color: white;
             display: inline;
             font-size: 5vh;
