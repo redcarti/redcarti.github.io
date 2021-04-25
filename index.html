@@ -132,11 +132,8 @@
                 // If current sentence was last then display the first one, else move to the next
                 if(part == (typings.length - 1))
                     part = 0;
-                else {
-                    let v = getRandomInt(0, typings.length);
-                    console.log(v)
-                    part = v
-                }
+                else 
+                    part++
 
                 partIndex = 0;
 
