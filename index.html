@@ -65,6 +65,10 @@
         }
     </style>
     <script>
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+        
         let typings = [
             '() => redcarti()',
             'window.close()',
@@ -72,6 +76,16 @@
             'let redcarti = require(\'redcarti\')',
             'undefined === null'
         ]
+        
+        let typingSpeed = [
+            100,
+            200,
+            300,
+            400,
+            500
+        ]
+        
+        let takeRandomSpeed = () => typingSpeed[getRandomInt(0, 4)]
         
         let partIndex = 0
         let part = 0
@@ -87,7 +101,7 @@
             setInterval ('cursorAnimation()', 1500);
             
             typingNow.content = typings[0]
-            interval = setInterval(Type, 100);
+            interval = setInterval(Type, takeRandomSpeed());
         });
         
         function Type() { 
@@ -100,7 +114,7 @@
             if(text === typings[part]) {
                 clearInterval(interval);
                 setTimeout(function() {
-                    interval = setInterval(Delete, 50);
+                    interval = setInterval(Delete, takeRandomSpeed());
                 }, 1000);
             }
         }
@@ -126,7 +140,7 @@
 
                 // Start to display the next sentence after some time
                 setTimeout(function() {
-                    interval = setInterval(Type, 100);
+                    interval = setInterval(Type, takeRandomSpeed());
                 }, 200);
             }
         }
