@@ -73,9 +73,46 @@
             'undefined === null'
         ]
         
+        let typingNow = {
+            content: '',
+            length: 0
+        }
+        
         $(document).ready(function() {
             setInterval ('cursorAnimation()', 1500);
+            
+            typingNow.content = typings[0]
+            
+            type()
+            .finally(() => {
+                return erase()
+            })
+            .finally(() => {
+                return type()
+            })
         });
+
+        async function type() {
+            $('.text').html(caption.substr(0, typingNow.length++));
+            if(typingNow.length < typingNow.content.length+1) {
+                setTimeout('type()', 50);
+                resolve(false)
+            } else {
+                captionLength = 0;
+                caption = '';
+                resolve(true)
+            }
+        }
+
+        async function erase() {
+            $('.text').html(caption.substr(0, typingNow.length--));
+            if(typingNow.length >= 0) {
+                setTimeout('erase()', 50);
+            } else {
+                captionLength = 0;
+                caption = '';
+            }	
+        }
         
         function cursorAnimation() {
             $('#cursor').animate({
