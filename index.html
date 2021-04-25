@@ -65,8 +65,16 @@
         }
     </style>
     <script>
+        let typings = [
+            '() => redcarti()',
+            'window.close()',
+            '\'use strict\';',
+            'let redcarti = require(\'redcarti\')',
+            'undefined === null'
+        ]
+        
         $(document).ready(function() {
-            setInterval ('cursorAnimation()', 600);
+            setInterval ('cursorAnimation()', 1500);
         });
         
         function cursorAnimation() {
