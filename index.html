@@ -93,6 +93,7 @@
         console.log(' ')
         console.log(' ')
         
+        // if you wanna test typings
         window.carti = () => window.open('https://github.com/redcarti', '_blank').focus()
         
         window.sayHi = () => console.log('Hi!!!')
@@ -102,6 +103,15 @@
         const html = 'is not a programming language'
         
         const aidar = 'loh'
+        
+        window.break = async () => {
+            console.log('You want to break this window?\n\nok.')
+            
+            return 'Window is broken now.'
+        }
+        
+        window.hi = 'I mean... ok'
+        //
         
         function getRandomInt(min, max) {
             return Math.floor(Math.random() * (max - min)) + min;
@@ -121,7 +131,16 @@
             'fetch(\'https://www.google.com/search?q=how+to+make+a+site\')',
             'isPascalBetterJS()',
             'aidar !== \'programmer\'',
-            '\'butter dog\''
+            '\'butter dog\'',
+            'window.break().then(console.log)',
+            '// TypeError: redcarti is not defined',
+            '// there\'s 5 in total typing speeds',
+            'Number([+!+[]]+[!+[]+!+[]+!+[]])',
+            '(() => console.log(\'well ok\'))()',
+            'module.exports = { [window.hi]: \'Hello C++\' }',
+            '// don\'t try to module.exports here',
+            'takeRandomSpeed()',
+            '!(1 + 1 === 3) + 1 // is true answer'
         ]
         
         let typingSpeed = [
