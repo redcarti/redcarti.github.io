@@ -76,7 +76,7 @@
             '\'use strict\';',
             'let redcarti = require(\'redcarti\')',
             'undefined === null',
-            '$(\'.typing\').text(\'redcarti\')',
+            '$(\'.typing .inner\').text(\'redcarti\');',
             'html === \'programming language\'',
             '!![] !== ![]',
             '{ \'hi\': \'Hello World!\' }'
@@ -106,7 +106,7 @@
         function Type() { 
             // Get substring with 1 characater added
             var text =  typings[part].substring(0, partIndex + 1);
-            $(`<p>${text}</p>`).insertBefore($('.cursor'));
+            $('.typing .inner').text(text);
             partIndex++;
 
             // If full sentence has been displayed then start to delete the sentence after some time
@@ -122,7 +122,7 @@
         function Delete() {
             // Get substring with 1 characater deleted
             var text =  typings[part].substring(0, partIndex - 1);
-            $(`<p>${text}</p>`).insertBefore($('.cursor'));
+            $('.typing .inner').text(text);
             partIndex--;
 
             // If sentence has been deleted then start to display the next sentence
@@ -156,7 +156,10 @@
 <body>
     <section class="mainSection">
         <div class="textSection flex-item-margin">
-            <p class="typing text"><span class="text cursor">|</span></p>
+            <p class="typing text">
+                <p class="inner" ></p>
+                <span class="text cursor">|</span>
+            </p>
         </div>
         
         <div class="iconsSection flex-item-margin">
