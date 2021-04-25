@@ -9,6 +9,7 @@
     <script defer src="/js/all.js"></script>
     <link rel="stylesheet" href="https://redcarti.github.io/css/jetbrainsmono.css" type="text/css">
     <link rel="stylesheet" href="https://redcarti.github.io/css/main.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" />
     <style>
         body {
             margin: 0;
@@ -63,11 +64,26 @@
             margin: 10px;
         }
     </style>
+    <script>
+        $(document).ready(function() {
+            setInterval ('cursorAnimation()', 600);
+        });
+        
+        function cursorAnimation() {
+            $('#cursor').animate({
+                opacity: 0
+            }, 'fast', 'swing').animate({
+                opacity: 1
+            }, 'fast', 'swing');
+        }
+    </script>
 </head>
 <body>
     <section class="mainSection">
         <div class="textSection flex-item-margin">
-            <p class="text">() => redcarti()</p>
+            <p class="text">
+                () => redcarti()<span id="cursor">|</span>
+            </p>
         </div>
         
         <div class="iconsSection flex-item-margin">
