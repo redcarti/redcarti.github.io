@@ -69,6 +69,22 @@
             display: flex;
             flex-wrap: wrap;
         }
+        
+        .inner::after {
+            content: '|';
+            display: inline-block;
+            color: white; 
+            animation: blink .75s step-end infinite;
+        }
+
+        @keyframes blink {
+            from, to { 
+                color: transparent 
+            }
+            50% { 
+                color: white; 
+            }
+        }
     </style>
     <script>
         function getRandomInt(min, max) {
