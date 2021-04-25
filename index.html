@@ -138,6 +138,17 @@
         }
         
         const jojo = () => { throw new ReferenceError('is this a JoJo reference?') }
+        
+        class RedCartiError extends Error {
+            constructor () {
+                super('redcarti is not defined')
+            }
+        }
+        
+        const hi = (v) => {
+            v ? console.log(v) : undefined
+            return hi
+        }
         //
         
         function getRandomInt(min, max) {
@@ -171,7 +182,10 @@
             '// i cant be hired but someone hire me',
             'new BigFloppa().pelmeni()',
             '// Van???',
-            'jojo() // ReferenceError: is this a JoJo reference?'
+            'jojo() // ReferenceError: is this a JoJo reference?',
+            'throw new RedCartiError()',
+            '// JetBrains Mono is best ever font',
+            'hi()()()()(\'hi!\')'
         ]
         
         let typingSpeed = [
