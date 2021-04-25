@@ -106,7 +106,7 @@
         function Type() { 
             // Get substring with 1 characater added
             var text =  typings[part].substring(0, partIndex + 1);
-            $(text).insertBefore($('.cursor'));
+            $(`<p>${text}</p>`).insertBefore($('.cursor'));
             partIndex++;
 
             // If full sentence has been displayed then start to delete the sentence after some time
@@ -122,7 +122,7 @@
         function Delete() {
             // Get substring with 1 characater deleted
             var text =  typings[part].substring(0, partIndex - 1);
-            $(text).insertBefore($('.cursor'));
+            $(`<p>${text}</p>`).insertBefore($('.cursor'));
             partIndex--;
 
             // If sentence has been deleted then start to display the next sentence
