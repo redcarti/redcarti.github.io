@@ -73,6 +73,16 @@
         .inner::after {
             content: '|';
             display: flex;
+            animation: blink .75s step-end infinite;
+        }
+
+        @keyframes blink {
+            from, to { 
+                color: transparent 
+            }
+            50% { 
+                color: white; 
+            }
         }
     </style>
     <script>
