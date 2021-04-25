@@ -76,7 +76,7 @@
             '\'use strict\';',
             'let redcarti = require(\'redcarti\')',
             'undefined === null',
-            '$(\'.text\').text(\'redcarti\')',
+            '$(\'.typing\').text(\'redcarti\')',
             'html === \'programming language\'',
             '!![] !== ![]',
             '{ \'hi\': \'Hello World!\' }'
@@ -95,11 +95,6 @@
         let partIndex = 0
         let part = 0
         
-        let typingNow = {
-            content: '',
-            length: 0
-        }
-        
         let interval
         
         $(document).ready(function() {
@@ -112,7 +107,7 @@
         function Type() { 
             // Get substring with 1 characater added
             var text =  typings[part].substring(0, partIndex + 1);
-            $('.text').text(text);
+            $('.typing').text(text);
             partIndex++;
 
             // If full sentence has been displayed then start to delete the sentence after some time
@@ -128,7 +123,7 @@
         function Delete() {
             // Get substring with 1 characater deleted
             var text =  typings[part].substring(0, partIndex - 1);
-            $('.text').text(text);
+            $('.typing').text(text);
             partIndex--;
 
             // If sentence has been deleted then start to display the next sentence
@@ -139,7 +134,7 @@
                 if(part == (typings.length - 1))
                     part = 0;
                 else
-                    part++;
+                    part = getRandomInt(0, typings.length);
 
                 partIndex = 0;
 
@@ -162,7 +157,7 @@
 <body>
     <section class="mainSection">
         <div class="textSection flex-item-margin">
-            <p class="text"></p><span id="cursor">|</span>
+            <p class="typing text"></p><span id="text cursor">|</span>
         </div>
         
         <div class="iconsSection flex-item-margin">
