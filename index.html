@@ -69,21 +69,6 @@
             display: flex;
             flex-wrap: wrap;
         }
-        
-        .inner::after {
-            content: '|';
-            display: flex;
-            animation: blink .75s step-end infinite;
-        }
-
-        @keyframes blink {
-            from, to { 
-                color: transparent 
-            }
-            50% { 
-                color: white; 
-            }
-        }
     </style>
     <script>
         function getRandomInt(min, max) {
@@ -118,8 +103,6 @@
         let interval
         
         $(document).ready(function() {
-            setInterval ('cursorAnimation()', 750);
-            
             interval = setInterval(Type, takeRandomSpeed());
         });
         
@@ -162,14 +145,6 @@
                     interval = setInterval(Type, takeRandomSpeed());
                 }, 200);
             }
-        }
-        
-        function cursorAnimation() {
-            $('.inner::after').animate({
-                opacity: 0
-            }, 'fast', 'swing').animate({
-                opacity: 1
-            }, 'fast', 'swing');
         }
     </script>
 </head>
