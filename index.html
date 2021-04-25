@@ -141,6 +141,7 @@
         
         class RedCartiError extends Error {
             constructor () {
+                this.name = 'RedCartiError'
                 super('redcarti is not defined')
             }
         }
@@ -185,7 +186,8 @@
             'jojo() // ReferenceError: is this a JoJo reference?',
             'throw new RedCartiError()',
             '// JetBrains Mono is best ever font',
-            'hi()()()()(\'hi!\')'
+            'hi()()()()(\'hi!\')',
+            '\'redcarti. and redcarti.\''
         ]
         
         let typingSpeed = [
