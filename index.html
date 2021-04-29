@@ -63,7 +63,7 @@
         .text, a {
             color: white;
             display: inline;
-            font-size: 5vh;
+            font-size: var(--fontResponsible, 5vh);
             margin: 0;
         }
         
@@ -93,28 +93,20 @@
             }
         }
         
-        @media only screen and (min-width: 640px) {
-            .text, a {
-                font-size: 3vh;
-            }
+        @media only screen and (max-width: 640px) {
+            --fontResponsible: 3vh;
         }
         
-        @media only screen and (min-width: 768px) {
-            .text, a {
-                font-size: 3.5vh;
-            }
+        @media only screen and (max-width: 768px) {
+            --fontResponsible: 3.5vh;
         }
         
-        @media only screen and (min-width: 1024px) {
-            .text, a {
-                font-size: 4vh;
-            }
+        @media only screen and (max-width: 1024px) {
+            --fontResponsible: 4vh;
         }
         
-        @media only screen and (min-width: 1280px) {
-            .text, a {
-                font-size: 4.5vh;
-            }
+        @media only screen and (max-width: 1280px) {
+            --fontResponsible: 4.5vh;
         }
         
         /*
