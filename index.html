@@ -4,314 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>redcarti</title>
+
     <!-- meta -->
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="redcarti">
     <meta property="og:title" content="redcarti">
-    <meta property="og:description" content="can you define redcarti()?">
-    <meta property="og:image" content="/img/ico.png">
+    <meta property="og:description" content="ReferenceError: redcarti is not defined">
+    <meta property="og:image" content="https://redcarti.github.io/assets/img/ico.png">
     <meta property="og:url" content="https://redcarti.github.io">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="redcarti">
+    <meta name="twitter:description" content="ReferenceError: redcarti is not defined">
+    <meta name="twitter:image:src" content="https://redcarti.github.io/assets/img/ico.png">
+    <meta name="twitter:url" content="https://redcarti.github.io">
+    <meta name="twitter:domain" content="redcarti.github.io">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@...">
+
     <!-- -->
-    <link rel="shortcut icon" href="/img/ico.png" type="image/png">
-    <script defer src="/js/all.js"></script>
+
+    <link rel="shortcut icon" href="/assets/img/ico.png" type="image/png">
+
     <!-- loading styles -->
+
     <link rel="stylesheet" href="https://redcarti.github.io/css/jetbrainsmono.css" type="text/css">
     <link rel="stylesheet" href="https://redcarti.github.io/css/main.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+
     <!-- -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <style>
-        body {
-            margin: 0;
-            display: flex;
-            text-decoration: none;
-            max-width: 100vw;
-            -webkit-font-feature-settings: "liga" on, "calt" on;
-            font-feature-settings: "liga" on, "calt" on;
-            -webkit-font-smoothing: antialiased;
-            text-rendering: optimizeLegibility;
-            font-family: 'JetBrains Mono', sans-serif;
-            letter-spacing: normal;
-        }
-        
-        /* not working. */
-        p::selection, 
-        p::-moz-selection, 
-        p::-webkit-selection {
-            background-color: white!important;
-            color: red!important;
-        }
 
-        .mainSection {
-            height: 100vh;
-            width: 100vw;
-            text-align: center;
-            justify-content: center;
-            align-content: center;
-            align-items: center;
-            background-color: red;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .textSection, .iconsSection {
-            display: flex;
-            justify-content: center;
-            align-content: center;
-            align-items: center;
-            max-width: 75vw;
-        }
-        
-        .text, a {
-            color: white;
-            display: inline;
-            font-size: var(--fontResponsible, 5vh);
-            margin: 0;
-        }
-        
-        .flex-item-margin {
-            margin: 10px;
-        }
-        
-        .typing {
-            display: inline;
-            max-width: 80vw;
-            word-wrap: break-word;
-        }
-        
-        .inner::after {
-            content: '|';
-            display: inline-block;
-            color: white; 
-            animation: blink .75s step-end infinite;
-        }
-
-        @keyframes blink {
-            from, to { 
-                color: transparent 
-            }
-            50% { 
-                color: white; 
-            }
-        }
-        
-        @media only screen and (max-width: 640px) {
-            .text, a { --fontResponsible: 3vh; }
-        }
-        
-        @media only screen and (max-width: 768px) {
-            .text, a { --fontResponsible: 3.5vh; }
-        }
-        
-        @media only screen and (max-width: 1024px) {
-            .text, a { --fontResponsible: 4vh; }
-        }
-        
-        @media only screen and (max-width: 1280px) {
-            .text, a { --fontResponsible: 4.5vh; }
-        }
-        
-        /*
-        @media (min-width: 1536px) {
-        
-        }
-        */
-    </style>
-    <script>
-        console.log(' ')
-        console.log(' ')
-        console.log(' ')
-        console.log('// window.carti()')
-        console.log(' ')
-        console.log(' ')
-        console.log(' ')
-        
-        // if you wanna test typings
-        window.carti = () => window.open('https://github.com/redcarti', '_blank').focus()
-        
-        window.sayHi = () => console.log('Hi!!!')
-        
-        const isPascalBetterJS = () => console.log('No.')
-        
-        const html = 'is not a programming language'
-        
-        const aidar = 'loh'
-        
-        window.break = async () => {
-            console.log('You want to break this window?\n\nok.')
-            
-            return 'Window is broken now.'
-        }
-        
-        window.hi = 'I mean... ok'
-        
-        class BigFloppa {
-            constructor () {}
-            
-            pelmeni() {
-                console.log('Пельмени. '
-                           +'Хорошие пельмени это очень вкусно. '
-                           +'На самом деле рецепт простой - много мяса, мало теста. '
-                           +'Сперва готовим тонкое яичное тесто, с добавлением сливочного масла. '
-                           +'Лук сладких сортов для образования бульончика и перец совсем немного. '
-                           +'Щедро выкладываем великолепный рубленый фарш, много мяса, мало теста. '
-                           +'Вот он настоящий пельмень, а внутри много сочной начинки, грудинка индюшки с курицей или телятина со свининой. '
-                           +'Многие и забыли как это может быть вкусно. '
-                           +'Выбирайте и наслаждайтесь - пельмени флопские. '
-                           +'Много мяса, мало теста.')
-            }
-        }
-        
-        const jojo = () => { throw new ReferenceError('is this a JoJo reference?') }
-        
-        class RedCartiError extends Error {
-            constructor () {
-                this.name = 'RedCartiError'
-                super('redcarti is not defined')
-            }
-        }
-        
-        const hi = (v) => {
-            v ? console.log(v) : undefined
-            return hi
-        }
-        
-        const javascript = 'javascript'
-        const java = 'java'
-        //
-        
-        function getBrowser() {
-            var sUsrAg = navigator.userAgent;
-
-            //The order matters here, and this may report false positives for unlisted browsers.
-
-            if (sUsrAg.indexOf("Firefox") > -1) {
-                 return "Mozilla Firefox";
-                 //"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:61.0) Gecko/20100101 Firefox/61.0"
-            } else if (sUsrAg.indexOf("Opera") > -1) {
-                 return "Opera";
-            } else if (sUsrAg.indexOf("Trident") > -1) {
-                 return "Microsoft Internet Explorer";
-                 //"Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; Zoom 3.6.0; wbx 1.0.0; rv:11.0) like Gecko"
-            } else if (sUsrAg.indexOf("Edge") > -1) {
-                 return "Microsoft Edge";
-                 //"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.16299"
-            } else if (sUsrAg.indexOf("Chrome") > -1) {
-                return "Google Chrome or Chromium";
-                //"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/66.0.3359.181 Chrome/66.0.3359.181 Safari/537.36"
-            } else if (sUsrAg.indexOf("Safari") > -1) {
-                return "Apple Safari";
-                //"Mozilla/5.0 (iPhone; CPU iPhone OS 11_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1 980x1306"
-            }
-            
-            return "unknown";
-        }
-        
-        function getRandomInt(min, max) {
-            return Math.floor(Math.random() * (max - min)) + min;
-        }
-        
-        let typings = [
-            '() => redcarti()',
-            'window.close()',
-            '\'use strict\'',
-            'let redcarti = require(\'redcarti\')',
-            'undefined === null',
-            '$(\'.inner\').text(\'redcarti\')',
-            'html === \'programming language\'',
-            '!![] !== ![]',
-            '{ \'hi\': \'Hello World!\' }',
-            '// type window.sayHi()',
-            'fetch(\'https://www.google.com/search?q=how+to+make+a+site\')',
-            'isPascalBetterJS()',
-            'aidar !== \'programmer\'',
-            '\'butter dog\'',
-            'window.break().then(console.log)',
-            '// ReferenceError: redcarti is not defined',
-            '// there\'s 5 in total typing speeds',
-            'Number([+!+[]]+[!+[]+!+[]+!+[]])',
-            '(() => console.log(\'well ok\'))()',
-            'module.exports = { [window.hi]: \'Hello C++\' }',
-            '// don\'t try to module.exports here',
-            'takeRandomSpeed()',
-            '!(1 + 1 === 3) + 1 // is true answer',
-            '// i cant be hired but someone hire me',
-            'new BigFloppa().pelmeni()',
-            '// Van???',
-            'jojo() // ReferenceError: is this a JoJo reference?',
-            'throw new RedCartiError()',
-            '// JetBrains Mono is best ever font',
-            'hi()()()()(\'hi!\')',
-            '\'redcarti. and redcarti.\'',
-            '// mathematicians are lazy. thats why im lazy but not a mathematician',
-            'javascript === java',
-            'console.log(\'go read JavaScript for kids\')',
-            '\'{"iHate":"doubleQuotes"}\'',
-            'class MyError extends Error { constructor () {} }',
-            '// you are using ' + getBrowser(),
-            '// took 3 hours to make it'
-        ]
-        
-        let typingSpeed = [
-            100,
-            125,
-            150,
-            200,
-            250
-        ]
-        
-        let takeRandomSpeed = () => typingSpeed[getRandomInt(0, 4)]
-        
-        let partIndex = 0
-        let part = 0
-        
-        let interval
-        
-        $(document).ready(function() {
-            interval = setInterval(Type, takeRandomSpeed());
-        });
-        
-        function Type() { 
-            // Get substring with 1 characater added
-            var text =  typings[part].substring(0, partIndex + 1);
-            $('.inner').text(text);
-            partIndex++;
-
-            // If full sentence has been displayed then start to delete the sentence after some time
-            if(text === typings[part]) {
-                clearInterval(interval);
-                setTimeout(function() {
-                    interval = setInterval(Delete, takeRandomSpeed());
-                }, 1000);
-            }
-        }
-
-        // Implements deleting effect
-        function Delete() {
-            // Get substring with 1 characater deleted
-            var text =  typings[part].substring(0, partIndex - 1);
-            $('.inner').text(text);
-            partIndex--;
-
-            // If sentence has been deleted then start to display the next sentence
-            if(text === '') {
-                clearInterval(interval);
-
-                // If current sentence was last then display the first one, else move to the next
-                if(part == (typings.length - 1))
-                    part = 0;
-                else 
-                    part++
-
-                partIndex = 0;
-
-                // Start to display the next sentence after some time
-                setTimeout(function() {
-                    interval = setInterval(Type, takeRandomSpeed());
-                }, 200);
-            }
-        }
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+    <!-- fontawesome --> <script src="/assets/js/all.js"></script>
 </head>
 <body>
+    <!-- 
+    Hi
+    
+    This may take a couple minutes
+
+    Don't turn off your computer
+    -->
     <section class="mainSection">
         <div class="textSection flex-item-margin">
             <div class="typing">
@@ -320,7 +58,7 @@
         </div>
         
         <div class="iconsSection flex-item-margin">
-            <a href="https://github.com/redcarti">
+            <a href="https://github.com/redcarti" class="icon">
                 <i class="fab fa-github"></i>
             </a>
         </div>

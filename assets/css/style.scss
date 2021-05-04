@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    display: flex;
+    text-decoration: none;
+    max-width: 100vw;
+    -webkit-font-feature-settings: "liga" on, "calt" on;
+    font-feature-settings: "liga" on, "calt" on;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: 'JetBrains Mono', sans-serif;
+    letter-spacing: normal;
+    flex-direction: column;
+}
+
+/* not working. */
+p::selection, 
+p::-moz-selection, 
+p::-webkit-selection {
+    background-color: white!important;
+    color: red!important;
+}
+
+.mainSection {
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+}
+
+.textSection, .iconsSection {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    max-width: 75vw;
+}
+
+.text, .icon {
+    color: white;
+    display: inline;
+    font-size: var(--fontResponsible, 5vh);
+    margin: 0;
+}
+
+.flex-item-margin {
+    margin: 10px;
+}
+
+.typing {
+    display: inline;
+    max-width: 80vw;
+    word-wrap: break-word;
+}
+
+.inner::after {
+    content: '|';
+    display: inline-block;
+    color: white; 
+    animation: blink .75s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { 
+        color: transparent 
+    }
+    50% { 
+        color: white; 
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .text, .icon { --fontResponsible: 3vh; }
+}
+
+@media only screen and (max-width: 768px) {
+    .text, .icon { --fontResponsible: 3.5vh; }
+}
+
+@media only screen and (max-width: 1024px) {
+    .text, .icon { --fontResponsible: 4vh; }
+}
+
+@media only screen and (max-width: 1280px) {
+    .text, .icon { --fontResponsible: 4.5vh; }
+}
+
+/*
+@media (min-width: 1536px) {
+
+}
+*/
